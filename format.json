@@ -1,0 +1,16 @@
+[
+    {
+        "identifier": "sig",
+        "jobs": [
+            {
+                "title": "Software Engineer",
+                "location": "Dublin",
+                "category": "SWE",
+                "post date": "01/02/2019",
+                "description": "A job description blah blah blah",
+                "experience": "Junior",
+                "url": "https://careers.sig.com/job/SUSQA004Y1335/Software-Engineer"
+            }
+        ]
+    }
+]

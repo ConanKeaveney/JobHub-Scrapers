@@ -1,0 +1,21 @@
+##########
+# Deploys a flask app over local port 5090 using gunicorn.
+###########
+FROM python:3.8-slim-buster
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV FLASK_APP "api.py"
+ENV FLASK_ENV "production"
+ENV FLASK_DEBUG True
+
+
+WORKDIR /usr/src/app/backend/scrapers
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+
+COPY . .
+# Use gunicorn to server flask app, not flask's dev/test server
+EXPOSE 80
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "api:app"]
