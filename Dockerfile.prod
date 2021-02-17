@@ -17,5 +17,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 # Use gunicorn to server flask app, not flask's dev/test server
-EXPOSE 80
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "api:app"]
+EXPOSE 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "api:app"]
